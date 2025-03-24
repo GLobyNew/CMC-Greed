@@ -16,8 +16,6 @@ const (
 	YEKT_TZ     = "Asia/Yekaterinburg"
 )
 
-
-
 func main() {
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", cmcGreedURL, nil)
@@ -47,7 +45,7 @@ func main() {
 		log.Print(err)
 		os.Exit(1)
 	}
-	if greedData.Data.Value >= 60 || greedData.Data.Value <= 23 {
-		greedData.printData()
+	if greedData.Data.Value >= 60 || greedData.Data.Value <= 40 {
+		greedData.sendData()
 	}
 }
