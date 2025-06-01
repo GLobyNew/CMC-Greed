@@ -45,7 +45,5 @@ func main() {
 		log.Print(err)
 		os.Exit(1)
 	}
-	if greedData.Data.Value >= 60 || greedData.Data.Value <= 23 {
-		greedData.sendData()
-	}
+	greedData.sendData()
 }
